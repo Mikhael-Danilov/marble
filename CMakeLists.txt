@@ -64,8 +64,11 @@ if(CMAKE_SYSTEM_NAME STREQUAL Android)
 else()
    find_package(Qt5WebKit)
    find_package(Qt5WebKitWidgets)
-   find_package(Qt5DBus REQUIRED)
-
+   
+   if( NOT WIN32 )
+     find_package(Qt5DBus REQUIRED)
+   endif( WIN32 )
+   
    if ( NOT Qt5WebKitWidgets_FOUND )
      set ( MARBLE_NO_WEBKITWIDGETS TRUE )
    endif()
