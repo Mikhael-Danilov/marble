@@ -580,6 +580,9 @@ install( FILES
     routing/RoutingManager.h
     routing/RoutingModel.h
     routing/RoutingProfile.h
+    
+    ui_BookmarkManagerDialog.h
+    BookmarkManagerDialog.h
 
     DESTINATION ${CMAKE_INSTALL_PREFIX}/include/marble
 )
